@@ -13,16 +13,18 @@ export default function Login(){
   const { login } = useContext(AuthContext);
   const nav = useNavigate();
 
-  const submit = async (e)=>{
-    e.preventDefault();
-    try{
-      const data = await loginApi(email, password);
-      login(data.token, rememberMe);
-      nav('/');
-    }catch(err){
-      alert('Login failed');
-    }
-  };
+  const submit = async (e) => {
+  e.preventDefault();
+  try {
+    const data = await loginApi(email, password); // this returns token
+    // login (context) will fetch profile; await it
+    await login(data.token, rememberMe);
+    nav('/');
+  } catch (err) {
+    console.error(err);
+    alert('Login failed');
+  }
+};
 
   return (
     <section className="" style={{backgroundcolor: "#8fc4b7", minHeight: "93.8vh", backgroundImage: `url(${bgImage})`,
