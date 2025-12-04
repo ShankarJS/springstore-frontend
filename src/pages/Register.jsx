@@ -20,18 +20,18 @@ export default function Register(){
   };
 
   return (
-  <section class="" style={{backgroundcolor: "#8fc4b7", minHeight: "93.8vh", backgroundImage: `url(${bgImage})`,
+  <section className="" style={{backgroundcolor: "#8fc4b7", minHeight: "93.8vh", backgroundImage: `url(${bgImage})`,
   backgroundSize: "cover",
   backgroundRepeat: "no-repeat",}}>
-  <div class="container py-5 h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-lg-8 col-xl-6">
-        <div class="card rounded-3">
+  <div className="container py-5 h-100">
+    <div className="row d-flex justify-content-center align-items-center h-100">
+      <div className="col-lg-8 col-xl-6">
+        <div className="card rounded-3">
           <img src={registercontainerbg}
-            class="w-100" style={{bordertopleftradius: ".3rem", bordertoprightradius: ".3rem"}}
+            className="w-100" style={{bordertopleftradius: ".3rem", bordertoprightradius: ".3rem"}}
             alt="Banner" />
-          <div class="card-body p-4 p-md-5">
-            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2 text-center">Registration</h3>
+          <div className="card-body p-4 p-md-5">
+            <h3 className="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2 text-center">Registration</h3>
 
             <form onSubmit={submit} className="mt-5">
            <div className="mb-3"><input className="form-control" placeholder="Name" value={name} onChange={e=>setName(e.target.value)} /></div>

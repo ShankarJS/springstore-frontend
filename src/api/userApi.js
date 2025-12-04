@@ -6,5 +6,7 @@ export async function getProfile(token) {
             Authorization: `Bearer ${token}`,
         },
     });
+
+    if (!res.ok) throw new Error("Invalid token");
     return res.json();
 }

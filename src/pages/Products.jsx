@@ -7,8 +7,8 @@ export default function Products(){
   useEffect(()=>{ getProducts().then(setItems).catch(()=>setItems([])); },[]);
 
   return (
-    <section class="" >
-  <div class="container py-5 h-100">
+    <section className="" >
+  <div className="container py-5 h-100">
     <div className="row g-3">
   {items.map(p => (
     <div key={p.id} className="col-12 col-md-4 col-lg-3">
